@@ -34,3 +34,15 @@ def discount(price: Double): Double =
 println(discount(50))
 println(discount(51))
 println(discount(100))
+
+def pow(exponent: Int, base: Int): Int =
+  var acc = 1
+  for (i <- 1 to exponent) {
+    acc = acc * base
+  }
+  acc
+
+println(pow(3,2))
+println(Math.pow(2,3))
+println(pow(2,3))
+println(Math.pow(3,2))
