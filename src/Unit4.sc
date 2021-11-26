@@ -14,3 +14,22 @@ println(b)
 println(b.title)
 println(b.author)
 println(b.genre)
+
+sealed trait Mode
+case object Length extends Mode
+case object Letters extends Mode
+case object Uppers extends Mode
+case object Digits extends Mode
+
+def predicateSelector(mode: Mode): Char => Boolean =
+  mode match
+    case Length => _ => true
+    case Letters => _.isLetter
+    case Uppers => _.isUpper
+    case Digits => _.isDigit
+
+def stats(s: String, predicate: Char => Boolean = { _ => true } ): Int = s.count(predicate)
+
+val text = "This is the example."
+println(stats(text, predicateSelector(Length))) // all chars
+println(stats(text, predicateSelector(Uppers))) // uppercase
