@@ -20,3 +20,5 @@ def triple2(ns: List[Int]): List[Int] =
 
 println(triple(nums))
 println(triple2(nums))
+
+println(List("").isEmpty)
