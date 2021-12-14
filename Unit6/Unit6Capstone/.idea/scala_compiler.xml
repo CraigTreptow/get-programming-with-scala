@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="get-programming-with-scala-lesson41,unit6capstone_4895" />
+  </component>
+</project>
